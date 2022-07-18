@@ -148,3 +148,7 @@ const commonWord = (firstArray, secondArray, thirdArray) => {
 commonWord(studentCoursesA,studentCoursesB,studentCoursesC);
 
 /* ceci est un test */
+
+
+let sortArray = [1, 7, 10, 19, 30];
+console.log(sortArray.sort((a, b) => a - b));
