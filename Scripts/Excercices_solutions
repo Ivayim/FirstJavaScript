@@ -1,0 +1,148 @@
+/* 1. Length */
+let myAlphabet = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "$",
+    "*",
+    "/",
+    "-",
+    "+",
+  ];
+
+/*  let length = myAlphabet.length;
+  console.log(length); */
+
+  function myAlphabetLenght() {
+    console.log(myAlphabet.length);
+  }
+myAlphabetLenght(myAlphabet);
+
+/*  2. Create an Array */
+
+const planets = ["Earth", "Mercury", "Mars", "Saturn", "Jupiter"];
+/* let arrayPosition = 0;
+planets.forEach(planet => {
+    console.log(planet);
+    console.log(arrayPosition);
+    arrayPosition++;
+}); */
+planets.forEach((planet, index) => {
+    console.log(`L'index de ${planet} est le ${index}`)    
+});
+
+/* 3. Manipulate data types */
+
+const someDataTypes = ["Cat", 5 , true , undefined];
+/*
+console.log(someDataTypes);
+let arrayPositionData = 0;
+someDataTypes.forEach(dataType => {
+    console.log(dataType);
+    console.log(arrayPositionData);
+    arrayPositionData++;
+});
+*/
+someDataTypes.forEach(dataType => {
+    console.log(typeof dataType);
+});
+
+/* typeof someDataTypes[] */
+
+/* 4. Empty Array */
+
+const emptyArrayy = [];
+console.log(emptyArrayy);
+let notEmptyArray = emptyArrayy.slice();
+notEmptyArray.push("Laugh", 4);
+console.log(notEmptyArray);
+
+/* 5. How many letters? */
+
+/* let furnitures = ['Table', 'Chairs','Couch'];
+furnitures.forEach(furniture => {
+    let eachLetterArray = furniture.split('');
+    eachLetterArray.forEach(letterArray => {
+        console.log(letterArray);    
+    });
+    
+});
+*/
+
+let furnitures = ['Table', 'Chairs','Couch'];
+furnitures.forEach(furniture => {
+    let newStringFurniture = new String(furniture);
+    let splittedFurniture = newStringFurniture.split('');
+    console.log(splittedFurniture);
+
+});
+
+/* 6. Which one is a number? */
+
+/* let values1= ["Apple", 1, false, "2"];
+values1.splice(2,2);
+values1.splice(0,1);
+console.log(values1);
+let values2 = [`5`, "Fries", 2 , true];
+values2.splice(0,2);
+values2.splice(1,1);
+console.log(values2);
+let values3 = ["Mars", "Strawberry", 9];
+values3.splice(0,2);
+console.log(values3); */
+
+let values1= ["Apple", 1, false, "2"];
+let values2 = [`5`, "Fries", 2 , true];
+let values3 = ["Mars", "Strawberry", 9];
+
+function isolateNumbers(arrays){
+    arrays.forEach(array => {
+    if (typeof array === "number") {
+    arrays.splice();
+    console.log(array);
+    }
+    else   {
+        console.log("ceci n'est pas un nombre");
+    }      
+    });
+}
+isolateNumbers(values1);
+isolateNumbers(values2);
+isolateNumbers(values3);
+
+/* 7. Gemini (optional & hard) */
+
+let studentCoursesA = ['Math', 'English', 'Programming'];
+let studentCoursesB = ['Geography', 'Spanish', 'Programming'];
+let studentCoursesC = ['Anglais', 'Russe', 'Programming'];
+
+
+const commonWord = (firstArray, secondArray, thirdArray) => {
+    let compareArray = firstArray.filter(
+        (word) => secondArray.includes(word) || thirdArray.includes(word));
+    console.log(compareArray);
+}
+commonWord(studentCoursesA,studentCoursesB,studentCoursesC);
