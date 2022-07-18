@@ -146,3 +146,5 @@ const commonWord = (firstArray, secondArray, thirdArray) => {
     console.log(compareArray);
 }
 commonWord(studentCoursesA,studentCoursesB,studentCoursesC);
+
+/* ceci est un test */
